@@ -5,17 +5,17 @@ import { posts } from './posts.mjs';
 const app = express();
 const PORT = 8080;
 
-app.use(express.static('client', {extensions: ['html']}));
+app.use(express.static('client', { extensions: ['html'] }));
 
 
-function makePost(req, res){
-    console.log(req.body);
-    posts.push({content: `${req.body.post}`});
-    res.json(posts);
+function makePost(req, res) {
+  console.log(req.body);
+  posts.push({ content: `${req.body.post}` });
+  res.json(posts);
 }
 
-function getPost(req, res){
-    res.json(posts);
+function getPost(req, res) {
+  res.json(posts);
 }
 
 app.get('/posts', getPost);

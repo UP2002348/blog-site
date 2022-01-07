@@ -12,5 +12,16 @@
   "dependencies": {
     "express": "^4.17.2",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-portsoc": "^0.8.2"
+  },
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    }
   }
 }
